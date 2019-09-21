@@ -19,7 +19,7 @@ class App extends Component {
         // implement search API call to giphy
         giphy('sxuQGRJfPwlnVUearMRBRbA48BnLHUwF').search({
             q: query,
-            rating: 'r',
+            rating: 'g',
             limit: 12,
         }, (error, result) => {
             this.setState({
