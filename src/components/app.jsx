@@ -14,10 +14,10 @@ class App extends Component {
         }
     }
 
-    select = (selected) => {
-        console.log(selected)
+    select = (selectedId) => {
+        console.log(selectedId)
         this.setState({
-            selectedGifId: selected
+            selectedGifId: selectedId
         });
     }
 
