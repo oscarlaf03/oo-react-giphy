@@ -10,7 +10,7 @@ class App extends Component {
         super(props);
         this.state ={
             gifs: [],
-            selectedGifId: 'Rk2URll0vw7wy0yR5f',
+            selectedGifId: this.selec,
         }
     }
 
@@ -38,6 +38,8 @@ class App extends Component {
     }
 
     render ( ) {
+
+
         return (
             <div>
                 <div className='left-scene'>
