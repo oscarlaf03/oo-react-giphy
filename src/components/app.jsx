@@ -10,9 +10,15 @@ class App extends Component {
         super(props);
         this.state ={
             gifs: [],
-            selectedGifId: "1hqYk0leUMddBBkAM7",
+            selectedGifId: 'Rk2URll0vw7wy0yR5f',
         }
+    }
 
+    select = (selected) => {
+        console.log(selected)
+        this.setState({
+            selectedGifId: selected
+        });
     }
 
     search = (query) => {
@@ -26,7 +32,7 @@ class App extends Component {
                 gifs: result.data
             });
             // Res contains gif data!
-            console.log(result)
+            // console.log(result)
         });
 
     }
@@ -37,11 +43,11 @@ class App extends Component {
                 <div className='left-scene'>
                     <SearchBar search={this.search}/>
                     <div className="selected-gif">
-                        <Gif id={this.state.selectedGifId}/>
+                        <Gif id={this.state.selectedGifId} select={this.select}/>
                     </div>
                 </div>
                 <div className='right-scene'>
-                    <GifList gifs = {this.state.gifs} />
+                    <GifList gifs = {this.state.gifs} select={this.select} />
                 </div>
             </div>
         );
